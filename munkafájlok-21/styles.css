@@ -26,7 +26,7 @@ body{
 #menu a:link,
 #menu a:visited{
     text-decoration: none;
-    color: #606;
+    color:red ;
 }
 
 #tartalom{
@@ -40,11 +40,6 @@ body{
     width: 270px;
 }
 
-table{
-    background-color: #cfc;
-    border-collapse: collapse;
-    
-}
 thead th{
     background-color: #060;
     color: white;
