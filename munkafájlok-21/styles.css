@@ -45,14 +45,19 @@ thead th{
     color: white;
     padding: 10px;
 }
-td{
-    padding: 10px 5px;
-    vertical-align: top;
-    min-width: 80px;
-}
+
+
 fieldset p{
     font-weight: bold;
 }
 input[type='text']{
     width: 300px;
 }
+
+h2 {
+    background-color: black ;width: 480px;
+    color: white;
+  }
+.masodik {
+ text-align: center;
+background-color: black;width: 480px;  }
