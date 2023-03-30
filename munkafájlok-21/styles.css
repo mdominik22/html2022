@@ -5,7 +5,7 @@ body{
     margin: 0;
 }
 #oldal{
-    width: 960px;
+    width: 1000px;
     margin: 0 auto;
     padding: 10px;
 }
@@ -17,7 +17,7 @@ body{
     float: left;
 }
 #menu li{
-    list-style-image:url('bullet.gif');
+   
     font-size: 1.2em;
     font-weight: bold;
     margin: 10px 0;
@@ -58,6 +58,8 @@ h2 {
     background-color: black ;width: 480px;
     color: white;
   }
-.masodik {
- text-align: center;
-background-color: black;width: 480px;  }
+  .table,th,td 
+{
+    border: 1px solid black;
+    
+}
