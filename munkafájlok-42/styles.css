@@ -1,8 +1,8 @@
-@import url();
+
 body{
     font-family: Arial, sans-serif;
     font-size: 13px;
-    background-color: azure;
+    background-image: linear-gradient(black, rgb(209, 209, 209));
     margin: 0;
 }
 #oldal{
@@ -10,7 +10,7 @@ body{
     margin: 0 auto;
 }
 #fejlec{
-    width: 960px;
+    width: 1040px;
     height: 100px;
     background: url(hatter.jpg);
 }
@@ -18,8 +18,9 @@ body{
     font-family: 'Audiowide', cursive;
     font-size: 2.5em;
     text-align: center;
-    color: yellow;
+    color: rgb(255, 0, 0);
     letter-spacing: 0.4em;
+    
 }
 #fejlec h2{
     font-family: 'Audiowide', cursive;
@@ -28,11 +29,11 @@ body{
     font-variant: small-caps;
 }
 #menu{
-    width: 960px;
+    width: 1040px;
     height: 40px;
-    background-color:gray;
+    background-image: linear-gradient(black, rgb(92, 92, 92) );
     opacity: 0.8;
-    color: white;
+    color: rgb(255, 0, 0);
     font-family: 'Audiowide', cursive;
 }
 #menu ul{
@@ -54,13 +55,14 @@ body{
     text-decoration: underline;
 }
 #menu a.kivalasztott{
-    color: yellow;
+    color: rgb(253, 0, 0);
 }
 #tartalom{
     width: 960px;
     min-height: 400px;
     background-color: white;
     padding-bottom: 20px;
+    padding: 40px
 }
 
 #tartalom h1{
@@ -72,7 +74,7 @@ body{
     padding-right: 20px;
 }
 .kep img{
-    width: 200px;
+    width: 300px;
 }
 dl{
     margin: 15px;
@@ -85,18 +87,8 @@ dt{
 dd{
     margin-left: 50px;
 }
-table{
-    margin: 10px auto;
-    border-collapse: collapse;
-}
-th,td{
-    border: 1px dotted #666;
-}
-th{
-    text-align: center;
-    font-size: 1.1em;
-    font-weight: bold;
-}
+
+
 fieldset{
     margin: 0 20px;
     padding: 20px;
@@ -104,3 +96,13 @@ fieldset{
 h2{
     color: white;
 }
+table {
+    background-color: rgb(77, 77, 77);
+    border-radius:  10px;
+    border: 1px solid black;
+}
+th, td {
+    
+    border: 1px solid black;
+}
+
