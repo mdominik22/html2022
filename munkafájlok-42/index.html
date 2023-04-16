@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="styles.css">
-<title>Izzó Fitnesz Klub</title>
+<title>programozási nyelvek</title>
 </head>
 <body>
     <div id="oldal">
@@ -21,8 +21,50 @@
         </div>
         <div id="tartalom">
             <h1> C++ Programozási nyelv</h1>
-            <p class="kep"><img src=""></p>
+            <p class="kep"><img src="logo(C++).png" style="width: 200px;"></p>
+            <p>C++ egy általános célú, magas szintű programozási nyelv. Támogatja a procedurális, az objektumorientált és a generikus programozást, valamint az adatabsztrakciót. Napjainkban szinte minden operációs rendszer alá létezik C++ fordító.</p>
+            <p> A nyelv a C programozási nyelv hatékonyságának megőrzése mellett törekszik a könnyebben megírható, karbantartható és újrahasznosítható kód írására, ez azonban sok kompromisszummal jár, erre utal, hogy általánosan elterjedt a mid-level minősítése is, bár szigorú értelemben véve egyértelműen magas szintű. </p>
+            
+<p>Bjarne Stroustrup kezdte el a C++ programozási nyelv fejlesztését a C programozási nyelv kiterjesztéseként, más nyelvekből véve át megoldásokat (Simula67, Algol68), ötleteket (ADA). A nyelv első, nem kísérleti körülmények közt való használatára 1983-ban került sor, 1987-ben pedig nyilvánvalóvá vált, hogy a C++ szabványosítása elkerülhetetlen. Ez a folyamat 1991 júniusában kezdődött el, amikor az ISO szabványosítási kezdeményezés részévé vált. A C++ programozási nyelv szabványát 1998-ban hagyták jóvá ISO/IEC 14882:1998 néven, az aktuális, 2017-es változat kódjelzése ISO/IEC 14882:2017.</p>
+<p>Mire a nyelvet szabványosították, már rengeteg C++ nyelvű kód készült, került használatba. Mivel a szabvány fejállományok némileg eltértek az eddigiektől, a bizottság érdekes megoldást választott a kompatibilitás megtartására:
 
+    A régi C++ fejállományok (pl. „iostream.h”) továbbra is használhatóak (bár hivatalosan nem támogatottak), de tartalmuk nincs benne a standard névtérben.
+    Az új, hivatalos fejállományok („iostream”) szinte megegyeznek a régiekkel, de tartalmuk a standard névtérben szerepel.
+    A szabvány C fejállományok (pl.: „stdio.h”) továbbra is támogatottak, de tartalmuk a globális névtérben van.
+    A C könyvtárak átvétele szintén a .h eltávolításával történt, beszúrva egy c-t a nevük elé (pl. „stdio.h”-ból „cstdio” lett). Tartalmuk a standard névtérben szerepel.</p>            
+<p>A nyelv bizonyos összetevőire (változók, konstansok, függvények stb.) névvel hivatkozunk. A legtöbb fordító csak az első 32 karaktert veszi figyelembe a nevekben. A név első karaktere betű vagy aláhúzásjel (_) lehet, ettől kezdődően már számok is szerepelhetnek benne. Lehetőleg saját névként ne adjunk meg aláhúzásjellel (_) kezdődő nevet, mert ezek a fordító számára vannak fenntartva (pl. __DATE__, __cplusplus, _MSC_VER). A C++ különbséget tesz a kis- és nagybetűk között (case-sensitive). Az alma név nem ugyanaz, mint az Alma név.</p>
+<p>Előfordulhat, hogy valamely kétoperandusú operátor különböző típusú operandusokkal rendelkezik. Ekkor, beépített típusok esetén, hogy a művelet elvégezhető legyen, a fordítónak azonos típusra kell alakítania az operandusokat. Megkülönböztetünk implicit és explicit típuskonverziót.
+
+    Implicit típuskonverzió: Ez a fajta konverzió a programozó beavatkozása nélkül automatikusan megy végbe, a C++ definíciójában szereplő szabályok alapján. A „szűkebb” típus adatvesztés nélkül konvertálódik a „szélesebb” típusra, ha szükséges. </p>
+     <p> egy általános célú, magas szintű programozási nyelv. Támogatja a procedurális, az objektumorientált és a generikus programozást, valamint az adatabsztrakciót. Napjainkban szinte minden operációs rendszer alá létezik C++ fordító.</p> 
+     <b> <p> Mielőtt sorra vennénk a C++ nyelv elemeit </p></b>
+     <p>    érdemes áttekinteni a C++ programok előállításával és futtatásával kapcsolatos kérdéseket. Megismerkedünk a C++ forráskód írásakor alkalmazható néhány szabállyal, a programok felépítésével, illetve a futtatáshoz szükséges lépésekkel a Microsoft Visual C++ rendszerben.
+ Néhány fontos szabály
+
+A szabványos C++ nyelv azon hagyományos programozási nyelvek közé tartozik, ahol a program megírása a program teljes szövegének begépelését is magában foglalja. A program szövegének (forráskódjának) beírása során figyelnünk kell néhány megkötésre:
+
+    A program alapelemei csak a hagyományos 7-bites ASCII kódtábla karaktereit (lásd A.1. szakasz függelék) tartalmazhatják, azonban a karakter- és szöveg konstansok, illetve a megjegyzések tetszőleges kódolású (ANSI, UTF-8, Unicode) karakterekből állhatnak. Néhány példa:
+
+    /* Értéket adunk  egy egész, egy karakteres és egy szöveges
+      (sztring)  változónak (többsoros megjegyzés) */
+    int valtozo = 12.23;  // értékadás (megjegyzés a sor végéig)
+    char jel = 'Á';    
+    string fejlec  = "Öröm a programozás"
+
+    A C++ fordító megkülönbözteti a kis- és a nagybetűket a programban használt szavakban (nevekben). A nyelvet felépítő nevek nagy többsége csak kisbetűket tartalmaz.
+
+    Bizonyos (angol) szavakat nem használhatunk saját névként, mivel ezek a fordító által lefoglalt kulcsszavak (lásd A.2. szakasz függelék).
+
+    Saját nevek képzése során ügyelnünk kell arra, hogy a név betűvel (vagy aláhúzás jellel) kezdődjön, és a további pozíciókban is csak betűt, számjegyet vagy aláhúzás jelet tartalmazzon. (Megjegyezzük, hogy az aláhúzás jel használata nem ajánlott.)
+
+    Még egy utolsó szabály az első C++ program megírása előtt, hogy lehetőleg ne túl hosszú, azonban ún. beszédes neveket képezzünk, mint például: ElemOsszeg, mereshatar, darab, GyokKereso.
+</p>
+<b><p> Az első C++ program két változatban </p></b>
+
+<p> Mivel a C++ nyelv a szabványos (1995) C nyelvvel felülről kompatibilis, egyszerű programok készítése során C programozási ismeretekkel is célt érhetünk. Vegyük például egy síkbeli kör kerületének és területének számítását! Az algoritmus igen egyszerű, hiszen a sugár bekérése után csupán néhány képletet kell használnunk.
+
+Az alábbi két megoldás alapvetően csak az input/output műveletekben különbözik egymástól. A C-stílusú esetben a printf() és a scanf() függvényeket használjuk, míg a C++ jellegű, második esetben a cout és a cin objektumokat alkalmazzuk. (A későbbi példákban az utóbbi megoldásra támaszkodunk.) A forráskódot mindkét esetben .CPP kiterjesztésű szövegfájlban kell elhelyeznünk.            
+</p>
         
 
         </div>
