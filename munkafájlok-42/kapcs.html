@@ -21,26 +21,95 @@
         </div>
         <div id="tartalom">
             <h1>C# programozási nyelv</h1>
-            <p class="kep"><img src=""></p>
-           <p> Mi az a C#?</p> 
-<p> A C#-ot a Microsoft egy dolgozója, Anders Hejlsberg fejlesztette ki 2000-ben a Sun Microsystems által készített Java konkurenciájaként. Hejlsberg azt állítja, hogy a C# közelebb áll a C++-hoz, bár sok közös tulajdonsága van a Javával is.
+            <p class="kep"><img src="clogo.png"></p>
+            <p>
 
-A „C#” nevében a kottaírásban használatos kereszt szimbóluma jelenik meg, ami egy félhanggal megemeli az adott hangot, és amit angolul „C sharp”-ként lehetne kibontani. A C# emellett a C++++-ra is emlékeztet, ha a pluszokat egy 2×2-es rácsban helyezzük el.
-
-A modern Java és a C++ programnyelvek nyomdokaiba lépve a C# is egy általános célú, objektumorientált nyelv, ami az egyszerűség mellett a kiemelkedő hatékonyságot célozza.</p>
-<p>
-Mennyi idő megtanulni a C# programozást?</p>
-<p>
-Ahogy minden szakismeretnek, úgy egy programnyelv megtanulásának időtartama is nagy mértékben változhat az egyéntől függően. Ha rendelkezel programozói háttérrel, a C# programozás alapjainak elsajátítása 2–3 hónapodba telhet.
-
-A fejlesztőként való elhelyezkedéshez szükséges tudás és képességek megszerzéséhez viszont körülbelül 1–2 évnyi gyakorlás kell.
-
-A webfejlesztői nyelvekkel (HTML, CSS és JavaScript) ellentétben egy intenzív, 14 hetes kurzus keretében nehéz mindent magadba szívni, ami elég ahhoz, hogy munkát is találj C#-fejlesztőként. Éppen ezért sokkal ritkábbak azok a programozókurzusok, amik C#-ot tanítanak. 
-
-Egy ilyen programozókurzus sokat taníthat neked a C# programozásról, de ajánlott további időt szánni a tanulásra és gyakorlásra, mielőtt munkába állsz C#- vagy .NET-fejlesztőként.  
-
-</p>
-            
+                <b>A C# a legelterjedtebb .NET alapú nyelv. Elterjedtségét nagy valószínűséggel annak köszönheti, hogy bár könnyen kezelhető mégis egy igen sokrétű nyelv. Ezt mi sem példázza jobban, mint hogy a BCL-t (Base Class Library – Alap osztálykönyvtár, vagyis a .NET osztálykönyvtárai) is ezen a nyelven írták. </b>
+                <br> </br>
+                A nyelv korai elterjedésében nagy szerepet játszott, hogy Anders Hejlsberg tervezte. Ő a Turbo Pascal eredeti szerzője, illetve a 90-es években a Borlandnál ő volt a Delphi vezető tervezője (A 90-es évek közepén a Borland Delphi volt a piacvezető Windows alkalmazás fejlesztési eszköz, így nem véletlen, hogy a Delphi fő tervezőjét kérték fel a C# megalkotására.).
+                <br> </br>
+                A nyelv hasonló a Java-hoz, viszont számos koncepcióban eltér tőle. Így nem teljesen mondható az, hogy aki Java-ban tud programozni, az C#-al is elboldogul. Ennek természetesen a fordítottja is igaz.
+                <br> </br>
+               <b> Objektum orientáltság </b>
+                <br> </br>
+                A C# teljesen objektumorientált. Így az objektum orientáltság alapelveinek ismerete nélkül nem tudunk hatékonyan C# programokat írni. Az objektum orientáltság nem csak egy szolgáltatás, hanem egy gondolkodásmód. Ez a fajta gondolkodás számos előnyt biztosít. A teljesség igénye nélkül:
+                <br> </br>
+                   <b>Egységbe zárás</b> 
+                <br> </br>
+                    Az egységbe zárás azt jelenti, hogy modulokat készítünk. Ezeket a modulokat osztályoknak nevezzük. Ezekbe az osztályokba beleteszünk mindent, ami a modul megvalósításához kell. Ezzel elérhető, hogy az osztályunk végfelhasználójának ne kelljen ismernie a belső működést, csupán azt, hogy miként tudja használni az objektumunkat1. Nem vagyok híve, hogy programozás közben matematikai példákat használjunk, de tény, hogy ilyen példák illusztrációs célokra hatékonyak2. Példaképpen tételezzük fel, hogy van egy háromszög osztályunk, ami a háromszög két dimenziós koordináta rendszerbeli pontjait tárolja, valamint rendelkezik tagfüggvényekkel is, amelyek segítségével kiszámítható a területe és kerülete. Ennyi adatot kell tudnia ideális esetben a felhasználónak is. Az osztály belső működésével és az adatok tárolásának módjával így nem kell bajlódnia feleslegesen, vagyis az egységbe zárás remek absztrakciós módszer.
+                    <br> </br>
+               
+                  <b> Többalakúság, polimorfizmus</b> 
+                <br> </br>
+                    Az objektumorientáltság több területén is alkalmazható. Ezen funkció segítségével lehetséges azonos nevű, de más paraméterekkel működő metódusokkal3 ellátni egy objektumot. A háromszög példánál maradva így lehetséges két különböző metódus definiálása a terület számítására. A végeredmény természetesen mindkét metódus esetén azonos lesz. Objektum orientáltságot nem támogató nyelvek esetén erre a célra két különböző nevű függvényt kellene létrehoznunk, ami nem éppen kényelmes. C# esetén a metódushívás módjából a fordító ki tudja következtetni, hogy melyik metódust kell meghívni. Másik nagy lehetősége a polimorfizmusnak, hogy egy magasabb szintű absztrakciót tesz lehetővé az öröklődésen keresztül.
+                
+                    A polimorfizmus egy másik esetét szintén egy példán keresztül egyszerűbb elmagyarázni. A természetben tudjuk, hogy vannak növény, minden és húsevő állatok, amik másként viselkednek. A polimorfizmus segítségével ezt modellezhetjük úgy, hogy van egy általános állat osztályuk, ami definálja az evés műveletét, viszont azt nem mondja meg, hogy annak pontosan hogyan is kellene viselkednie. Ebben az esetben, ha örököltetünk az állat osztályunkból például egy kecske típusút, akkor az ősossztály által leírt viselkedést megkapjuk (evés folyamata), de a tényleges megvalósítást a kecske osztályunk testre szabhatja. Ennek a működésnek előnye, hogy ha a közös őst fogadó metódust írunk(jelen pillanatban az állat osztály), akkor nem a metódus fogja tartalmazni a logikát, ami a különböző evési viselkedések megvalósításához kellene, hanem az egyes osztályok.
+                    <br> </br>
+                   <b>Öröklés</b> 
+                <br> </br>
+                    Az öröklés az egész objektumorientált paradigma legösszetettebb fogalma. Lehetővé teszi, hogy a már meglévő osztályainkból leszármaztatott osztályokat hozzunk létre. A leszármaztatott osztályok az ősosztály képességeit tovább tudják bővíteni, ki tudják azt egészíteni, így kevesebb alkalommal kell újra feltalálnunk a kereket programjaink írásakor.
+                    <br> </br>
+                  <b> Újrahasználhatóság</b> 
+                <br> </br>
+                    Az egész objektum orientáltság célja, hogy olyan kódrészleteket alkossunk meg, amelyeket később, akár több programunkban is fel tudunk használni.
+                    <br> </br>
+                
+                <p> Az objektumorientált programozási paradigma számos negatív kritikát kapott a funkcionális programozási nyelvek4 használóitól. A kritikák szerint az OOP modellel együtt jár a környezet is, ami nélkül nem lehet használni OOP megoldásokat, illetve az OOP nem ad lényegesen jobb eszközöket más megoldásoknál. A funkcionális programozás a viselkedéseket, interakciókat helyezi előtérbe az adattal ellentétben (OOP). Egyes feladatokban ez a jobb másokban az. A funkcionális programozás azért terjed nagyon, mert az állapot kiiktatása sok hibalehetőséget elhárít különösen a nagy párhuzamosságot igénylő és vagy elosztott (Microservice/Serverless) rendszerekben.
+                
+                A kritikák igazak, de csak részben. Tény, hogy OOP nélkül is lehet remek szoftvereket írni, azonban ezen szoftverek karbantarthatósága fényévekkel elmarad az objektumorientált programokétól. Ezért nem véletlen, hogy minden RAD (Rapid Application Development – Gyors alkalmazás fejlesztő rendszer) technológia nyelve objektumorientált.
+                
+                A C# egyébként számos lehetőséget biztosít, amivel a nyelvben a funkcionális programozás is lehetséges és verzióról verzióra ezen lehetőségeknek a tárháza bővül.
+                
+                A RAD fejlesztés a szokványos vízesés modellt annyiban módosítja, hogy kevesebb időt szánunk az előzetes tervezésre, helyette a fókusz a kódoláson van. Ez egyfajta alkalmazkodás a modern kor elvárásaihoz, ahol előfordulhat, hogy a specifikáció lényegesen megváltozik a szoftver életciklusa során.
+                
+                Az OOP úgy segíti a gyors alkalmazás fejlesztést, hogy az ilyen keretrendszerek számos kész, előre megírt osztályt szolgáltatnak, amelyeket könnyen felhasználhatunk és biztos működnek. Ezáltal nem kell elvesznünk a részletekben és ténylegesen az alkalmazás kódra koncentrálhatunk. A Visual Studio integrált fejlesztő környezet (IDE) emellett számos vizuális felhasználói felület készítő és kódgeneráló szolgáltatást nyújt. A .NET keretrendszer és a Visual Studio együtt alkot ilyen gyors alkalmazás készítő, úgynevezett RAD fejlesztő rendszert.</p>
+                <br> </br>
+                <img src="clogo2.png" style="float: left; width: 960px;">
+                <br> </br>
+              <h4> 1. </h4> <b>Objektum, osztály:</b>
+                
+                A száraz definíción túl talán egy példával egyszerűbben szemléltethető a két fogalom közötti különbség. Tételezzük fel, hogy süteményt sütünk. A sütemény készítéséhez süti formát használunk, amely meghatározza a süti alakját, viszont ez nem ehető végtermék, csupán egy eszköz, amely segítségével sütiket készíthetünk.
+                
+                
+                A sütemény alakja a forma által lesz meghatározott és teljesen mindegy, hogy a forma segítségével mennyi sütit gyártottunk, mert azok mindegyike azonos alakkal fog rendelkezni.
+                <br> </br>
+                <h4> 2. </h4> <b> Az object ősosztály:</b>
+        
+                C# esetén minden objektum őse az object osztály külön jelzés nélkül. Ez több szempontból is hasznos. A legfőbb szempont az, hogy írhatunk általánosított metódusokat, amelyek minden típuson működnek. Kihasználva azt a tényt, hogy minden típusunk egyben object is.
+                
+                Másik fő haszna ennek a szisztémának, hogy az object osztály olyan metódusokat bocsájt a számunkra, amelyek a keretrendszer belső optimális működéséhez járulnak hozzá, valamint minden objektum esetén hasznosak lehetnek. Az object osztály metódusairól, szerepükről és működésükről a későbbiek folyamán részletesen lesz szó egyedi osztályok írásakor.
+                <br> </br>
+                <h4> 3. </h4><b>Névadási szisztémák:</b>
+                
+                A változók és függvények elnevezése fontos részét képezi a programunknak. A legjobb, ha olyan változóneveket használunk, amelyek beszédesek, jól leírják az adott metódus, változó, osztály feladatát.
+                
+                A beszédes nevek kialakítására több szisztéma létezik. Az egyik legnépszerűbb szisztéma, hogy ha több szóból áll a választott azonosítónk, akkor az egyes tagokat alulvonással kapcsoljuk össze. Például: cel_homerseklet.
+                <br> </br>
+                C# és .NET esetén a preferált elnevezési séma a Pascal casing írás. Ez a séma a nevét onnan kapta, hogy a Pascal nyelvben használták. Ezen írásmód lényege, hogy a különálló szavakat nagy kezdőbetűvel látjuk el, szóköz helyett. Az előző példában használt azonosítónév Pascal casing-el: CelHomerseklet.
+                
+                A privát, illetve belsőleg használt azonosító neveknél C# esetén találkozhatunk a camel casing írásmóddal. Ennek lényege, hogy az első azonosító szó kis betűvel kezdődik, majd az azt követőek nagy kezdőbetűvel. Az előző példákban használt változónevünk camel casing-el: celHomerseklet.
+                
+                Még egy másik elnevezési séma a Hungarian Notation. Ez a nevét Charles Simonyi magyar származása miatt kapta. Simonyi ezt a fajta jelölésrendszert a C programozási nyelvhez dolgozta ki, ahol nem sok megkötés van a különböző típusú változók között végezhető műveletekre. Ez sok esetben hibához vezethet. Ezért ez a jelölés rendszer a változó neve mellett feltünteti a névben a változó típusát is.
+                
+                A Hungarian Notation a megalkotása után számos pozitív és negatív kritikát kapott. A negatív kritikák közül a legjogosabb érv az, hogy rontja a kód olvashatóságát.
+                
+                Szerény véleményem szerint létjogosultsága C# esetén akkor van, ha grafikus alkalmazásokat készítünk. Ebben az esetben két különböző felületre kell figyelnünk (kód és grafikus tervező). Ilyenkor igen jól jön, ha a grafikus tervezőben a beviteli mezőink neveiben szerepeltetjük a vezérlő típusát is, viszont bármilyen más esetben én kerülném a használatát.
+                A C# szintaxisa
+                
+                A C# a nevéből adódóan a C-szerű nyelvek családjába tartozik. A C-szerű nyelvek esetén három fontos szintaktikai szabály van, amit be kell tartanunk:
+                
+                    Az egyes, különálló utasítások végén pontosvessző áll (Ez általában a sor vége. Érdemes tartani az egy sor, egy utasítás szabályt).
+                
+                    A kis és nagybetűk különböznek. Tehát a PéldaAzonosito és a példaazonosito kifejezés nem azonos.
+                
+                    A program egységeit blokkokkal jelöljük ki. A blokkok { jellel kezdődnek és } jellel végződnek.
+                
+                    Az objektum nem más, mint egy adott osztály memóriában példányosított, létrehozott változata. Forráskód szerkesztése közben osztályokat alkotunk, amik a program futása közben objektumokká alakulnak.↩
+                
+                    Természetesen nem csak matematikai problémák levezetésére, leprogramozására alkalmasak az objektumorientált nyelvek.
+                
+                   
+                  
             
         </div>
     </div>
